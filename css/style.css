@@ -1,20 +1,20 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #61122f;
+  background-color: #8FBC8F;
   font-family: 'Merriweather', serif; 
 }
 /* header */
 
 #header-nav{
-	background-color:#f6b319 ;
+	background-color:#F5F5F5 ;
 	border-radius: 0;
 	border:0;
 }
 
 #logo-img{
-	background: 
-	width: 150px;
+	background: url("../images/logo.png") no-repeat;
+	width: 300px;
 	height: 150px;
 	margin: 10px 15px 10px 0px;
 }
