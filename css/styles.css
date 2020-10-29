@@ -102,8 +102,8 @@ body {
 @media (min-width: 992px) and (max-width: 1199px){
 	#logo-img{
 		background: url("../images/logo-medium.png") no-repeat; 
-		width:170px;
-		height:80px;
+		width:100px;
+		height:100px;
 		margin:5px 5px 5px 0;
 	}
 }
