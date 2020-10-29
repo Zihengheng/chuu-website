@@ -119,6 +119,12 @@ body {
 	.navbar-brand h1{
 		font-size:1.8em;
 	}
+	/*end of header*/
+	/*main content of home page*/
+	.container .jumbotron{
+		background: url("../images/dining-era-s.jpg") no-repeat;
+		height:400px;
+	}
 
 }
 /********** Extra small devices only **********/
@@ -149,14 +155,19 @@ body {
     margin: 0 20px;
     padding: 10px;
     border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
+    background-color: #FFBE4A;
+    color: #000000;
   }
 	#xs-deliver {
     margin-top: 5px;
     font-size: .7em;
     letter-spacing: .1em;
     text-transform: uppercase;
+  }
+
+  .container .jumbotron{
+  	margin-top:30px;
+  	padding:0;
   }
 
 }
