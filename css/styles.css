@@ -109,6 +109,11 @@ body {
 	.navbar-brand h1{
 		font-size:1.5em;
 	    }
+	/*main content*/
+	.container .jumbotron{
+		background: url("../images/dining-era-md.jpg" no-repeat);
+		height:600px;
+	}
 }
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -123,8 +128,9 @@ body {
 	/*main content of home page*/
 	.container .jumbotron{
 		background: url("../images/dining-era-s.jpg") no-repeat;
-		height:400px;
+		height:450px;
 	}
+	/*end of main content-home page*/
 
 }
 /********** Extra small devices only **********/
