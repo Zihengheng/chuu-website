@@ -99,19 +99,64 @@ body {
 
 }
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px){
+@media (min-width: 992px) and (max-width: 1199px) {
 	#logo-img{
 		background: url("../images/logo-medium.png") no-repeat; 
 		width:100px;
 		height:100px;
-		margin:5px 5px 5px 0;
-	}
+		margin:30px 5px 5px 0;
+	    }
+	.navbar-brand h1{
+		font-size:1.5em;
+	    }
 }
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+	#nav-list a{
+		font-size:12px;
+		margin-top:10px;
+	}
+	.navbar-brand h1{
+		font-size:1.8em;
+	}
 
 }
 /********** Extra small devices only **********/
 @media (max-width: 767px){
+	/*Header*/
+	.navbar-brand{
+		padding-top: 5px;
+		height:125px;
+	}
+	.navbar-brand h1{
+		padding-top: 10px;
+		font-size:5vw;
+	}
+	.navbar-brand p img{
+		height: 20px;
+	}
+	#collapsable-nav a{
+		/*Collapsed nav menu text*/
+		font-size:1.2em;
+	}
+	#collapsable-nav a span{
+		font-size:16px;
+		margin-right:5px;
+	}
+	#call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+	#xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
 
 }
