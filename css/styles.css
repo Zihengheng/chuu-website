@@ -97,8 +97,8 @@ body {
 @media (min-width: 1200px) {
 	/*main content*/
 	.container .jumbotron{
-		background: url("..images/dining-era-lg.jpg") no-repeat;
-		height:700px;
+		background: url("../images/dining-era-lg.jpg") no-repeat;
+		height:650px;
 	}
 	/*main content end*/
 
