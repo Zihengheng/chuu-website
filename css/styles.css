@@ -90,7 +90,24 @@ body {
 	margin-top:-30px;
 }
 /*End header*/
+/*Home page*/
+.container .jumbotron{
+   box-shadow: 0 0 50px #3F0C1F;
+   border: 2px solid #3F0C1F;
+}
 
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile, #specials-tile, #map-tile{
+	height:200px;
+	width:100%;
+	margin-bottom: 15px;
+	position:relative;
+	border:2px solid #3F0C1F;
+	overflow:hidden;
+}
 /*Media queries*/
 
 /************Lerge devices only*************/
@@ -98,7 +115,7 @@ body {
 	/*main content*/
 	.container .jumbotron{
 		background: url("../images/dining-era-lg.jpg") no-repeat;
-		height:650px;
+		height:600px;
 	}
 	/*main content end*/
 
