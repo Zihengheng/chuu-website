@@ -90,6 +90,7 @@ body {
 	margin-top:-30px;
 }
 /*End header*/
+
 /*Home page*/
 .container .jumbotron{
    box-shadow: 0 0 50px #556B2F;
@@ -133,6 +134,45 @@ body {
 }
 
 /*End home page*/
+
+/****************** Footer ***********************/
+.panel-footer{
+	margin-top:30px;
+	padding-top:35px;
+	padding-bottom:30px;
+	background-color: #dba800;
+	color:  #0d0d0d;
+	border-top:0;
+	font-size: 18px;
+}
+
+.panel-footer div.row{
+	margin-top: 35px;
+}
+
+#hours, #address{
+	line-height: 2;
+}
+
+#hours > span, #address >span{
+	font-size:1.3em;
+}
+
+#address p {
+  color: #003d1f;
+  font-size:16px;
+  line-height: 1.8;
+}
+
+#text{
+	font-style:italic;
+}
+
+#text p:nth-child(2) {
+  margin-top: 25px;
+}
+
+/****************** End footer ***********************/
 
 /*Media queries*/
 
