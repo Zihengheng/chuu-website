@@ -91,7 +91,7 @@ body {
 }
 /*End header*/
 
-/*Home page*/
+/*Home page content*/
 .container .jumbotron{
    box-shadow: 0 0 50px #556B2F;
    border: 2px solid #556B2F;
@@ -133,17 +133,18 @@ body {
   opacity: .8;
 }
 
-/*End home page*/
+/*End home page content*/
 
 /****************** Footer ***********************/
 .panel-footer{
 	margin-top:30px;
 	padding-top:35px;
 	padding-bottom:30px;
-	background-color: #dba800;
-	color:  #0d0d0d;
+	background-color:#dba800;
+	color:  #000;
 	border-top:0;
 	font-size: 18px;
+	opacity: .8;
 }
 
 .panel-footer div.row{
@@ -159,7 +160,7 @@ body {
 }
 
 #address p {
-  color: #003d1f;
+  color: #006400;
   font-size:16px;
   line-height: 1.8;
 }
@@ -173,6 +174,37 @@ body {
 }
 
 /****************** End footer ***********************/
+
+/************************** menu categories ******************************/
+.category-tile{
+	position:relative;
+	border:2px solid #3F0C1F;
+	overflow:hidden;
+	width:200px;
+	height:200px;
+	margin:0 auto 15px;
+}
+
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8
+}
+
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-categories-title + div {
+  margin-bottom: 50px;
+}
 
 /*Media queries*/
 
