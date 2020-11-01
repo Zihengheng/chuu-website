@@ -178,7 +178,7 @@ body {
 /************************** menu categories ******************************/
 .category-tile{
 	position:relative;
-	border:2px solid #3F0C1F;
+	border:2px solid #556B2F;
 	overflow:hidden;
 	width:200px;
 	height:200px;
@@ -199,7 +199,7 @@ body {
 }
 
 .category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
+  box-shadow: 0 5px 10px 5px #696969;
 }
 
 #menu-categories-title + div {
@@ -296,6 +296,19 @@ body {
   	margin-top:30px;
   	padding:0;
   }
+
+    /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
  }
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
