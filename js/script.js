@@ -18,3 +18,33 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     $(event.target).focus();
   });
 });
+
+//IMDINVOK
+(function(global){
+  var dc = {};
+
+  var homeHtml = "snippets/home-snippets.html";
+
+  //inserting innerhtml on selected element
+  var insertHtml = (selector,html) => {
+    document.querySelector(selector).innerHTML = html;
+  }
+
+  //show loading icon
+  var showLoading = function(selector){
+    let html = "<div class='text-center'>";
+    html += "<img src='images/ajax-loader.gif'></div>";
+    insertHtml(selector,html);
+  }
+
+  //on page load
+  document.addEventListener("DOMContentLoaded",(event) =>{
+    showLoading("#main-content");
+    $ajaxUtils.sendGetRequest(homeHtml,(responseText) => {
+      document.querySelector("#main-content")
+      .innerHTML = responseText;
+    }, false);
+  });
+
+  global.$dc = dc;
+})(window);
