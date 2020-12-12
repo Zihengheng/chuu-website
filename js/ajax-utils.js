@@ -16,16 +16,16 @@
 	//get request  
 	ajaxUtils.sendGetRequest = 
   	function(requestUrl, responseHandler, isJsonResponse) {
-    	var request = getRequestObject();
-    	request.onreadystatechange = 
-      	function() { 
-        	handleResponse(request, 
+    var request = getRequestObject();
+    request.onreadystatechange = 
+      function() { 
+        handleResponse(request, 
                        responseHandler,
                        isJsonResponse); 
       };
     request.open("GET", requestUrl, true);
     request.send(null); // for POST only
-  };
+  	};
 
 	//function handleresponse  封装好的代码
 
@@ -38,7 +38,8 @@
 	    }
 
 	    if (isJsonResponse) {
-	      responseHandler(JSON.parse(request.responseText));
+	    	let a = JSON.parse(request.responseText);
+	      responseHandler(a);
 	    }
 	    else {
 	      responseHandler(request.responseText);
