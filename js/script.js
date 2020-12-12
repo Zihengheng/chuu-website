@@ -25,7 +25,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
   // specify urls
   var homeHtml = "snippets/home-snippets.html";
-  var categoriesTitleHtml = "snippets/categories-title-snippet.html";
+  var categoriesTitleHtml = "snippets/categories-title-snippets.html";
   var categoryHtml = "snippets/category-snippet.html";
   //json file
   var allCategoriesUrl =
@@ -54,7 +54,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   });
 
   //load menu categories
-  dc.loadMenuCatetories = ()=>{
+  dc.loadMenuCategories = function(){
     showLoading("#main-content");
     $ajaxUtils.sendGetRequest(allCategoriesUrl,
       buildAndShowCategories);
