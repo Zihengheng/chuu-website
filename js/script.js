@@ -26,11 +26,11 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
   // specify urls
   var homeHtml = "snippets/home-snippets.html";
   var categoriesTitleHtml = "snippets/categories-title-snippets.html";
-  var categoryHtml = "snippets/category-snippet.html";
+  var categoryHtml = "snippets/categoty-snippet.html";
   //json file
   var allCategoriesUrl =
   "https://davids-restaurant.herokuapp.com/categories.json";
-  var allCategories = "data/all-daregories.json"
+ 
 
   //inserting innerhtml on selected element
   var insertHtml = (selector,html) => {
@@ -42,6 +42,15 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     let html = "<div class='text-center'>";
     html += "<img src='images/ajax-loader.gif'></div>";
     insertHtml(selector,html);
+  }
+
+  // Return substitute of '{{propName}}'
+  // with propValue in given 'string'
+  var insertProperty = function (string, propName, propValue) {
+  var propToReplace = "{{" + propName + "}}";
+  string = string
+    .replace(new RegExp(propToReplace, "g"), propValue);
+  return string;
   }
 
   //on page load
