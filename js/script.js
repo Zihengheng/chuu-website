@@ -23,7 +23,14 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 (function(global){
   var dc = {};
 
+  // specify urls
   var homeHtml = "snippets/home-snippets.html";
+  var categoriesTitleHtml = "snippets/categories-title-snippet.html";
+  var categoryHtml = "snippets/category-snippet.html";
+  //json file
+  var allCategoriesUrl =
+  "https://davids-restaurant.herokuapp.com/categories.json";
+  var allCategories = "data/all-daregories.json"
 
   //inserting innerhtml on selected element
   var insertHtml = (selector,html) => {
@@ -45,6 +52,57 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
       .innerHTML = responseText;
     }, false);
   });
+
+  //load menu categories
+  dc.loadMenuCatetories = ()=>{
+    showLoading("#main-content");
+    $ajaxUtils.sendGetRequest(allCategoriesUrl,
+      buildAndShowCategories);
+  }
+
+  //// Build HTML for the categories page
+  function buildAndShowCategories(categories){
+    //load title snippets
+    $ajaxUtils.sendGetRequest(categoriesTitleHtml,
+      (categoriesTitleHtml)=> {
+        $ajaxUtils.sendGetRequest(categoryHtml,
+          (categoryHtml) => {
+            var categoriesViewHtml =
+            buildCategoriesViewHtml(categories,
+                                    categoriesTitleHtml,
+                                    categoryHtml);
+            insertHtml("#main-content", categoriesViewHtml);
+          },false);
+      },false);
+  }
+
+  // Using categories data and snippets html
+  // build categories view HTML to be inserted into page
+  function buildCategoriesViewHtml(categories,
+                                 categoriesTitleHtml,
+                                 categoryHtml) {
+
+  var finalHtml = categoriesTitleHtml;
+  finalHtml += "<section class='row'>";
+
+  // Loop over categories
+  for (var i = 0; i < categories.length; i++) {
+    // Insert category values
+    var html = categoryHtml;
+    var name = "" + categories[i].name;
+    var short_name = categories[i].short_name;
+    html =
+      insertProperty(html, "name", name);
+    html =
+      insertProperty(html,
+                     "short_name",
+                     short_name);
+    finalHtml += html;
+  }
+
+  finalHtml += "</section>";
+  return finalHtml;
+  }
 
   global.$dc = dc;
 })(window);
